@@ -121,23 +121,23 @@ const array = [1, 2, 3];
 
 //map関数
 //従来のfor文
-const arr = ["田中", "ズ", "Mike"];
-// for (let i = 0; i < arr.length; i++) {
-//   console.log(arr[i]);
-// }
+// const arr = ["田中", "ズ", "Mike"];
+// // for (let i = 0; i < arr.length; i++) {
+// //   console.log(arr[i]);
+// // }
 
-const arr2 = arr.map((name) => {
-  return name;
-});
-console.log(arr2);
-//map()は配列で返す
+// const arr2 = arr.map((name) => {
+//   return name;
+// });
+// console.log(arr2);
+// //map()は配列で返す
 
-const arrMap = arr.map((num) => console.log(num));
-console.log(arrMap); //numをreturnすれば、配列にnumが入る
-//1行で書ける
+// const arrMap = arr.map((num) => console.log(num));
+// console.log(arrMap); //numをreturnすれば、配列にnumが入る
+// //1行で書ける
 
-const nameArr = ["戸谷", "宮田", "小山"];
-nameArr.map((name, index) => console.log(`${index + 1}番目は　${name}です。`));
+// const nameArr = ["戸谷", "宮田", "小山"];
+// nameArr.map((name, index) => console.log(`${index + 1}番目は　${name}です。`));
 //indexを使うときは引数にindexを入れることに注意
 
 //filter関数
@@ -166,3 +166,28 @@ nameArr.map((name, index) => console.log(`${index + 1}番目は　${name}です�
 // console.log(booNum(20,"w"));
 
 //論旨演算子
+const flag1 = true;
+const flag2 = true;
+
+if (flag1 || flag2) {
+  console.log("1か2はtrue");
+}
+
+if (flag1 && flag2) {
+  console.log("1と2はtrue");
+}
+
+const num = null;
+// const num = 100
+const fee = num || "金額未設定です";
+// fee = null >>　"金額未設定です"
+// fee = 100 >>　100
+// || は左がfalseなら右を返す、左がtrueなら左を返す
+console.log(fee);
+
+//　&& は左がtrueなら右を返す、左がfalse左を返す
+const num2 = null;
+// const fee2 = num2 && "何か設定されました"
+const fee2 = "何か設定されました" && num2;
+
+console.log(fee2);
